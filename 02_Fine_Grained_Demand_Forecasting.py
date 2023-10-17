@@ -64,7 +64,7 @@ display(demand_df)
 
 def one_step_ahead_forecast(pdf: pd.DataFrame) -> pd.DataFrame:
 
-    #Prepare seroes for forecast
+    #Prepare series for forecast
     series_df = pd.Series(pdf['demand'].values, index=pdf['date'])
     series_df = series_df.asfreq(freq='W-MON')
 
